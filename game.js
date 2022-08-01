@@ -1,9 +1,9 @@
-var buttonColours = ["red", "blue", "green", "yellow"];
-var gamePattern = [];
-var userClickedPattern = [];
+const  buttonColours = ["red", "blue", "green", "yellow"];
+let  userClickedPattern = [];
+let  gamePattern = [];
+let  started = true;
+let  level = 0;
 
-var started = true;
-var level = 0;
 
 $(".start").click(function() {
   if (started) {
@@ -15,7 +15,7 @@ $(".start").click(function() {
 
 $(".btn").click(function() {
 
-  var userChosenColour = this.getAttribute("id");
+  let  userChosenColour = this.getAttribute("id");
   userClickedPattern.push(userChosenColour);
 
   playSound(userChosenColour);
@@ -57,11 +57,11 @@ function checkAnswer(currentLevel) {
 }
 
 function nextSequence() {
-  userClickedPattern = [];
   level++;
+  userClickedPattern = [];
   $("#level-title").text("Level " + level);
-  var randomNumber = Math.floor(Math.random() * 4);
-  var randomChosenColour = buttonColours[randomNumber];
+  let  randomNumber = Math.floor(Math.random() * 4);
+  let  randomChosenColour = buttonColours[randomNumber];
   gamePattern.push(randomChosenColour);
 
   $("#" + randomChosenColour).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
@@ -69,7 +69,7 @@ function nextSequence() {
 }
 
 function playSound(name) {
-  var audio = new Audio("sounds/" + name + ".mp3");
+  let  audio = new Audio("sounds/" + name + ".mp3");
   audio.play();
 }
 
@@ -83,7 +83,7 @@ function animatePress(currentColor) {
 //1. Create a new function called startOver().
 function startOver() {
 
-  //3. Inside this function, you'll need to reset the values of level, gamePattern and started variables.
+  //3. Inside this function, you'll need to reset the values of level, gamePattern and started let iables.
   level = 0;
   gamePattern = [];
   started = true;
