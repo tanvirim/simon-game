@@ -39,22 +39,26 @@
     font-size: 30px;
     border: 5px solid black;
     border-radius: 20px;
+    
   } 
   
   .green{
     background: #087116;
+    color:yellow;
   }
   .green:hover{
     background: #50b283;
   }
   .red{
     background: #ec0f3b;
+    color:rgb(3, 3, 69) ;
   }
   .red:hover{
     background: #f15e5e;
   }
   .yellow{
     background: #e3e312;
+    color: green;
   }
   .yellow:hover{
     background: #ece565;
@@ -62,6 +66,7 @@
   
   .blue{
     background: #097ecb;
+    color: rgb(161, 11, 11);
   }
   .blue:hover{
     background: #51aeed;
