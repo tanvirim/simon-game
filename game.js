@@ -1,16 +1,15 @@
-
 var buttonColours = ["red", "blue", "green", "yellow"];
 var gamePattern = [];
 var userClickedPattern = [];
 
-var started = false;
+var started = true;
 var level = 0;
 
-$(document).keypress(function() {
-  if (!started) {
+$(".start").click(function() {
+  if (started) {
     $("#level-title").text("Level " + level);
     nextSequence();
-    started = true;
+    started = false;
   }
 });
 
@@ -49,7 +48,7 @@ function checkAnswer(currentLevel) {
         $("body").removeClass("game-over");
       }, 200);
 
-      $("#level-title").text("Game Over, Press Any Key to Restart");
+      $("#level-title").text("Game Over, Click Here To Restart");
 
       //2. Call startOver() if the user gets the sequence wrong.
       startOver();
@@ -88,5 +87,6 @@ function startOver() {
   //3. Inside this function, you'll need to reset the values of level, gamePattern and started variables.
   level = 0;
   gamePattern = [];
-  started = false;
+  started = true;
 }
+ 
