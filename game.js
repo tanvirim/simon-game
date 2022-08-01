@@ -48,7 +48,7 @@ function checkAnswer(currentLevel) {
         $("body").removeClass("game-over");
       }, 200);
 
-      $("#level-title").text("Game Over, Click Here To Restart");
+      document.getElementById("level-title").innerHTML = `<span style='color: red;'>You Scored ${level-1}</span>  </br> </br> Game Over <span style='color: red;'>Click here</span> To Restart The Game`;
 
       //2. Call startOver() if the user gets the sequence wrong.
       startOver();
@@ -65,7 +65,7 @@ function nextSequence() {
   var randomChosenColour = buttonColours[randomNumber];
   gamePattern.push(randomChosenColour);
 
-  $("#" + randomChosenColour).fadeIn(100).fadeOut(100).fadeIn(100);
+  $("#" + randomChosenColour).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
   playSound(randomChosenColour);
 }
 
