@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Cairo:wght@400;600&family=Dancing+Script:wght@400;500;700&family=Montserrat:wght@300&family=Orbitron:wght@700&family=Poppins&family=Roboto:ital,wght@0,400;0,500;1,100;1,700&display=swap');
 *{
     box-sizing: border-box;
     margin: 0;
     padding:0;
+    font-family:'orbitron',sans-serif;
+    
   }
   h1{
-    width: 620px;
+    width: 700px;
+    font-size: 50px ;
     border: 2px dotted grey;
     margin: 50px auto ;
     padding: 10px;
@@ -17,41 +21,45 @@
     display: grid;
     grid-template-columns: repeat(2, 300px);
     grid-gap: 30px ;
-    
+  }
+  .game-over {
+    background-color: red;
+    opacity: 0.8;
   }
   .green , .red , .yellow , .blue{
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-    height:auto;
-    background-color: aqua;
     height: 300px;
     width: 300px;
     line-height: 300px;
-  }
+    font-size: 30px;
+    outline: 5px solid black;
+    border-radius: 20px;
+  } 
   
   .green{
-    background: #3def55;
+    background: #087116;
   }
   .green:hover{
-    background: #57faab;
+    background: #50b283;
   }
   .red{
-    background: #cd3553;
+    background: #ec0f3b;
   }
   .red:hover{
-    background: #ee6161;
+    background: #f15e5e;
   }
   .yellow{
-    background: #dada23;
+    background: #e3e312;
   }
   .yellow:hover{
-    background: #faf366;
+    background: #ece565;
   }
   
   .blue{
-    background: #3498db;
+    background: #097ecb;
   }
   .blue:hover{
-    background: #3cb0fd;
+    background: #51aeed;
   }
   
   .pressed {
