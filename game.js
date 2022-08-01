@@ -15,7 +15,7 @@ $(".start").click(function() {
 
 $(".btn").click(function() {
 
-  var userChosenColour = $(this).attr("id");
+  var userChosenColour = this.getAttribute("id");
   userClickedPattern.push(userChosenColour);
 
   playSound(userChosenColour);
@@ -57,7 +57,6 @@ function checkAnswer(currentLevel) {
 }
 
 function nextSequence() {
-
   userClickedPattern = [];
   level++;
   $("#level-title").text("Level " + level);
