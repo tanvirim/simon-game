@@ -48,7 +48,7 @@ function checkAnswer(currentLevel) {
         $("body").removeClass("game-over");
       }, 200);
 
-      document.getElementById("level-title").innerHTML = `<span style='color: red;'>You Scored ${level-1}</span>  </br> </br> Game Over <span style='color: red;'>Click here</span> To Restart The Game`;
+      document.getElementById("level-title").innerHTML = `<span style='color: red;'>You Scored ${level-1}</span>  </br> </br> Game Over <span style='color: red;cursor:pointer;'>Click here</span> To Restart The Game`;
 
       //2. Call startOver() if the user gets the sequence wrong.
       startOver();
